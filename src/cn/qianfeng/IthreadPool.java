@@ -10,6 +10,8 @@ import java.util.concurrent.Executors;
 public class IthreadPool {
 
 	public static void main(String[] args) {
+		
+//		long start = System.currentTimeMillis();
 		// 创建线程池
 		ExecutorService pool = Executors.newFixedThreadPool(3);
 		
@@ -20,6 +22,9 @@ public class IthreadPool {
 		pool.submit(mp);
 		
 		pool.shutdown();
+		
+		long end = System.currentTimeMillis();
+//		System.out.println("运行时间：" + (end-start) + "ms");
 	}
 }
 
